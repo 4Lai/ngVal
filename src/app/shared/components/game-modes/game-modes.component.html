@@ -1,0 +1,30 @@
+<div class="background">
+  <div class="width-spacing hidden">
+    <div class="hidden">
+      <h1>Current game modes</h1>
+    </div>
+
+    <div class="grid">
+      <div
+        class="game-modes-element-container hidden"
+        *ngFor="let el of this.gameModeList"
+      >
+        <img
+          *ngIf="el.displayIcon != null"
+          class="image-icon"
+          src="{{ el.displayIcon }}"
+          alt=""
+        />
+        <img
+          class="imgg2"
+          *ngIf="el.displayIcon === null"
+          src="../../../../assets/img/question mark.png"
+          alt=""
+        />
+
+        <p class="title">{{ el.displayName }}</p>
+        <p class="duration">{{ el.duration != null ? el.duration : "?" }}</p>
+      </div>
+    </div>
+  </div>
+</div>
