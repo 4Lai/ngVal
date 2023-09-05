@@ -1,0 +1,23 @@
+<div class="background">
+
+  <div class="header-container">
+    <h1 class="header-title">Categories</h1>
+    <span class="material-symbols-outlined hover-icon" (click)="close()">
+      close
+    </span>
+  </div>
+
+
+  <div class="link-container">
+    <a
+      class="categories-link"
+      [ngClass]="{ even: i % 2 === 0, odd: i % 2 === 1 }"
+      *ngFor="let el of this.categories.categories; let i = index"
+      (click)="close()"
+      routerLink="{{ el.url }}"
+      >{{ el.title }}</a
+    >
+  </div>
+
+  
+</div>

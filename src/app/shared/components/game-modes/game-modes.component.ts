@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { GameModes } from '../../interfaces/game-modes';
 import { ActivatedRoute } from '@angular/router';
 import { intersect } from '../../helpers/intersector';

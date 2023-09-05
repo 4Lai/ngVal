@@ -1,5 +1,4 @@
 <div class="header-container">
-
   <img
     class="header-images"
     *ngFor="let el of this.agentList"
@@ -8,7 +7,12 @@
   />
 
   <div class="header-title-container">
-      <h1 class="header-title-heading">Welcome to Valorant database</h1>
+    <h1 class="header-title-heading">Welcome to Valorant database</h1>
   </div>
 
+  <div class="header-button-container">
+    <button (click)="openPopup()" class="header-button">
+      Select a category
+    </button>
+  </div>
 </div>

@@ -1,1 +1,30 @@
+<div class="top-menu-container">
+  <span (click)="openMenu()" class="material-symbols-outlined icon">
+    menu
+  </span>
+</div>
 
+<div
+  class="navigation-container"
+  [ngClass]="{ clicked: isClicked === true }"
+  *ngIf="isClicked === true"
+>
+  <div class="adjusting">
+    <div (click)="toMain()" class="title-container">
+      <h1 class="title">ngVal</h1>
+      <hr />
+    </div>
+
+    <hr class="horizontal" />
+
+    <div class="link-container">
+      <a
+        class="single-link"
+        *ngFor="let el of this.categories.categories"
+        routerLink="{{ el.url }}"
+        >{{ el.title }}</a
+      >
+    </div>
+    <hr class="horizontal" />
+  </div>
+</div>

@@ -2,6 +2,7 @@ export interface Agents {
   status: number;
   data: [
     {
+      color: string;
       uuid: string;
       displayName: string;
       developerName: string;
@@ -11,6 +12,7 @@ export interface Agents {
       bustPortrait: string;
       fullPortrait: string;
       fullPortraitV2: string;
+      description: string;
       killfeedPortrait: string;
       background: string;
       backgroundGradientColors: string[];

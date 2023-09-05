@@ -10,6 +10,13 @@ import { HeaderSectionHomeComponent } from './shared/components/header-section-h
 import { NavigationMenuComponent } from './shared/components/navigation-menu/navigation-menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import { GameModesComponent } from './shared/components/game-modes/game-modes.component';
+import { MapsComponent } from './shared/components/maps/maps.component';
+import { PopupCategoriesComponent } from './shared/components/popup-categories/popup-categories.component';
+import { MatDialogModule } from '@angular/material/dialog'
+import { FormsModule } from '@angular/forms';
+import { AgentsComponent } from './shared/components/agents/agents.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 
 @NgModule({
   declarations: [
@@ -19,12 +26,18 @@ import { GameModesComponent } from './shared/components/game-modes/game-modes.co
     HeaderSectionHomeComponent,
     NavigationMenuComponent,
     GameModesComponent,
+    MapsComponent,
+    PopupCategoriesComponent,
+    AgentsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatDialogModule,
+    FormsModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,73 @@
+.background {
+  height: 80dvh;
+  width: 60dvw;
+  overflow-x: hidden;
+}
+
+.header-container {
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 32px;
+}
+
+.link-container {
+  display: grid;
+  text-align: center;
+  grid-template-columns: auto;
+}
+
+.categories-link {
+  padding: 20px;
+  font-size: 24px;
+  color: #fff;
+  background-color: #16161c;
+  text-decoration: none;
+}
+
+.even {
+  background: linear-gradient(to left, #404047 34%, red 65%) right;
+  background-size: 300% 100%;
+}
+
+.even:hover {
+  transition: 1s;
+  background-position: left;
+  transform: scale(1.05);
+}
+
+.even:active {
+  transition: 0.5s;
+  background-position: left;
+  transform: scale(1.05);
+}
+
+.odd {
+  background: linear-gradient(to left, #16161c 34%, red 65%) right;
+  background-size: 300% 100%;
+}
+
+.odd:hover {
+  transition: 1s;
+  background-position: left;
+  transform: scale(1.05);
+}
+
+.odd:active {
+  transition: 0.5s;
+  background-position: left;
+  transform: scale(1.05);
+}
+
+.hover-icon {
+  cursor: pointer;
+  font-size: 24px;
+}

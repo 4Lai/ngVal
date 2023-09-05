@@ -1,0 +1,695 @@
+.background {
+  margin-left: 16px;
+  margin-right: 16px;
+  height: 100dvh;
+
+  @media only screen and (min-width: 1600px) and (max-width: 2560px) {
+    margin: 0;
+  }
+}
+
+.width-spacing {
+  margin: auto auto;
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    width: 75%;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+    width: 75%;
+  }
+}
+
+h1 {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  color: #fff;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    font-size: 32px;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    font-size: 32px;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    font-size: 32px;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    font-size: 32px;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+    font-size: 32px;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 1s;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.agent-image {
+  width: 600px;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    width: 300px;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    width: 300px;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    width: 300px;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    width: 300px;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+    width: 400px;
+  }
+  @media only screen and (min-width: 1601px) and (max-width: 1919px) {
+    width: 500px;
+  }
+}
+
+.agents-container {
+
+  padding: 32px;
+  background: rgb(0, 224, 255);
+  background: radial-gradient(
+    circle,
+    rgba(0, 224, 255, 0) 0%,
+    rgba(255, 0, 0, 0.5) 100%
+  );
+  height: 750px;
+  display: grid;
+  grid-template-columns: auto;
+  margin-bottom: 20px;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    padding: 16px;
+    width: 100%;
+    font-size: 12px;
+    height: 800px;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    padding: 16px;
+    width: 100%;
+    font-size: 12px;
+    height: 800px;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    padding: 16px;
+    width: 100%;
+    font-size: 12px;
+    height: 450px;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    padding: 16px;
+    width: 100%;
+    font-size: 12px;
+    height: 400px;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+    padding: 16px;
+    width: 100%;
+    padding: 16px;
+    height: 500px;
+  }
+  @media only screen and (min-width: 1601px) and (max-width: 1919px) {
+    padding: 16px;
+    width: 100%;
+    padding: 16px;
+    height: 625px;
+  }
+}
+
+.agent-description {
+  font-size: 32px;
+  color: #fff;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    width: 100%;
+    font-size: 12px;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    width: 100%;
+    font-size: 12px;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    width: 100%;
+    font-size: 12px;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    width: 100%;
+    font-size: 12px;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+    width: 100%;
+    font-size: 24px;
+  }
+  @media only screen and (min-width: 1601px) and (max-width: 1919px) {
+    width: 100%;
+    font-size: 24px;
+  }
+  @media only screen and (min-width: 1601px) and (max-width: 1919px) {
+    width: 100%;
+    font-size: 24px;
+  }
+}
+
+.agent-name {
+  color: #fff;
+  font-size: 48px;
+}
+
+.agent-role {
+  font-size: 24px;
+  color: #fff;
+}
+
+.agent-single-inner-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.agent-title-role-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+}
+
+.agent-details {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    grid-template-columns: auto;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    grid-template-columns: auto;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    grid-template-columns: auto auto;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    grid-template-columns: auto auto;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+    grid-template-columns: auto auto;
+  }
+  @media only screen and (min-width: 1601px) and (max-width: 1919px) {
+    grid-template-columns: auto auto;
+  }
+}
+
+.abilities-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  align-items: flex-start;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    gap: 0;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    gap: 0;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    width: 100%;
+    justify-items: center;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    width: 100%;
+    justify-items: center;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+    width: 100%;
+    justify-items: center;
+  }
+  @media only screen and (min-width: 1601px) and (max-width: 1919px) {
+    width: 100%;
+    justify-items: center;
+  }
+}
+
+.skill-icon {
+  cursor: pointer;
+  width: 100px;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    width: 50px;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    width: 50px;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    width: 25px;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    width: 25px;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+    width: 50px;
+  }
+  @media only screen and (min-width: 1601px) and (max-width: 1919px) {
+    width: 75px;
+  }
+}
+
+.skill-name {
+  color: #fff;
+  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+    font-size: 24px;
+  }
+  @media only screen and (min-width: 1601px) and (max-width: 1919px) {
+    font-size: 24px;
+  }
+}
+
+.abilities-single-container {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    padding: 16px;
+    width: 100%;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    padding: 16px;
+    width: 100%;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    padding: 16px;
+    width: 100%;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    padding: 8px;
+    width: 100%;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+    padding: 16px;
+    width: 100%;
+  }
+  @media only screen and (min-width: 1601px) and (max-width: 1919px) {
+    padding: 16px;
+    width: 100%;
+  }
+}
+
+.description-background {
+  padding: 32px;
+  background: rgb(22, 22, 28, 0.5) 100%;
+  background: radial-gradient(
+    circle,
+    rgb(22, 22, 28, 0.5) 100%,
+    rgb(22, 22, 28, 0.5) 100%
+  );
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    padding: 16px;
+    width: 300px;
+    left: 0;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    padding: 16px;
+    width: 300px;
+    left: 0;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    padding: 16px;
+    width: 100%;
+    left: 0;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    padding: 16px;
+    width: 100%;
+    left: 0;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+    padding: 16px;
+    width: 100%;
+    left: 0;
+  }
+  @media only screen and (min-width: 1601px) and (max-width: 1919px) {
+    padding: 16px;
+    width: 100%;
+    left: 0;
+  }
+}
+
+.abilities-description-container {
+  background: rgb(22, 22, 28, 0.5) 100%;
+  background: radial-gradient(
+    circle,
+    rgb(22, 22, 28, 0.5) 100%,
+    rgb(22, 22, 28, 0.5) 100%
+  );
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  @media only screen and (min-width: 1601px) and (max-width: 1919px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.abilities-description {
+  padding: 32px;
+  color: #fff;
+  font-size: 24px;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    padding: 16px;
+    width: 275px;
+    font-size: 12px;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    padding: 16px;
+    width: 275px;
+    font-size: 12px;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    padding: 16px;
+    width: 100%;
+    font-size: 12px;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    padding: 16px;
+    width: 100%;
+    font-size: 12px;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+    padding: 16px;
+    width: 100%;
+    font-size: 18px;
+  }
+  @media only screen and (min-width: 1601px) and (max-width: 1919px) {
+    padding: 32px;
+    width: 100%;
+    font-size: 22px;
+  }
+}
+
+.abilities-with-description-container {
+  padding-top: 32px;
+  min-width: 776px;
+  max-width: 776px;
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    min-width: 100%;
+    max-width: 100%;
+    gap: 10px;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    min-width: 100%;
+    max-width: 100%;
+    gap: 10px;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    min-width: 100%;
+    max-width: 100%;
+    gap: 10px;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    min-width: 100%;
+    max-width: 100%;
+    gap: 10px;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+    min-width: 100%;
+    max-width: 100%;
+    gap: 10px;
+  }
+  @media only screen and (min-width: 1601px) and (max-width: 1919px) {
+    min-width: 100%;
+    max-width: 100%;
+    gap: 10px;
+  }
+}
+
+.focused {
+  background: rgb(22, 22, 28, 0.5) 100%;
+  background: radial-gradient(
+    circle,
+    rgb(22, 22, 28, 0.5) 100%,
+    rgb(22, 22, 28, 0.5) 100%
+  );
+}
+
+.gekko-bgClass {
+  background: rgb(255, 154, 0);
+  background: radial-gradient(
+    circle,
+    rgba(255, 154, 0, 0.3) 0%,
+    rgba(0, 255, 4, 0.5) 50%
+  );
+}
+
+.fade-bgClass {
+  background: rgb(0, 159, 253);
+  background: radial-gradient(
+    circle,
+    rgba(0, 159, 253, 0.6699054621848739) 0%,
+    rgba(42, 42, 114, 0.7) 100%
+  );
+}
+
+.fade-bgClassino {
+  background: rgb(28, 37, 55, 0);
+  background: radial-gradient(
+    circle,
+    rgba(28, 37, 55, 0.6) 0%,
+    rgba(82, 124, 173, 0.7) 100%
+  );
+}
+
+.breach-bgClass {
+  background: rgb(170, 106, 60);
+  background: radial-gradient(
+    circle,
+    rgba(110, 113, 123, 0.7) 0%,
+    rgba(170, 106, 60, 0.6) 100%
+  );
+}
+
+.sova-bgClass {
+  background: rgb(0, 159, 253);
+  background: radial-gradient(
+    circle,
+    rgba(148, 0, 211, 0.8) 0%,
+    rgba(75, 0, 130, 0.8) 10%,
+    rgba(0, 0, 255, 0.8) 20%,
+    rgba(0, 255, 0, 0.8) 30%,
+    rgba(255, 255, 0, 0.8) 40%,
+    rgba(255, 127, 0, 0.8) 50%,
+    rgba(255, 0, 0, 0.8) 60%,
+    rgba(128, 0, 0, 0.8) 70%,
+    rgba(255, 0, 255, 0.8) 80%,
+    rgba(255, 255, 255, 0.8) 90%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.deadlock-bgClass {
+  background: rgb(206, 192, 193);
+  background: radial-gradient(
+    circle,
+    rgba(206, 192, 193, 0.6) 0%,
+    rgba(187, 159, 120, 0.7) 100%
+  );
+}
+
+.raze-bgClass {
+  background: rgb(220, 95, 46);
+  background: radial-gradient(
+    circle,
+    rgba(54, 94, 81, 0.8) 0%,
+    rgba(220, 95, 46, 0.9) 100%
+  );
+}
+
+.chamber-bgClass {
+  background: rgb(183, 124, 55);
+  background: radial-gradient(
+    circle,
+    rgba(222, 224, 228, 0.7) 0%,
+    rgba(183, 124, 55, 0.7) 100%
+  );
+}
+
+.kayoClass {
+  background: rgb(12, 24, 54);
+  background: radial-gradient(
+    circle,
+    rgba(189, 255, 255, 0.7) 0%,
+    rgba(12, 24, 54, 0.8) 100%
+  );
+}
+
+.skye-bgClass {
+  background: rgb(104, 121, 77);
+  background: radial-gradient(
+    circle,
+    rgba(104, 121, 77, 0.7) 0%,
+    rgba(111, 136, 58, 0.7) 100%
+  );
+}
+
+.cypher-bgClass {
+  background: rgb(186, 185, 186);
+  background: radial-gradient(
+    circle,
+    rgba(243, 168, 115, 0.4) 0%,
+    rgba(186, 185, 186, 0.7) 100%
+  );
+}
+
+.killjoy-bgClass {
+  background: rgb(252, 242, 49);
+  background: radial-gradient(
+    circle,
+    rgba(83, 157, 110, 0.7) 0%,
+    rgba(252, 242, 49, 0.7) 100%
+  );
+}
+
+.harbor-bgClass {
+  background: rgb(123, 154, 206);
+  background: radial-gradient(
+    circle,
+    rgba(123, 154, 206, 0.3) 0%,
+    rgba(115, 77, 66, 0.8) 100%
+  );
+}
+
+.viper-bgClass {
+  background: rgb(19, 19, 28);
+  background: radial-gradient(
+    circle,
+    rgba(19, 19, 28, 0.7) 0%,
+    rgba(12, 167, 73, 0.7) 100%
+  );
+}
+
+.phoenix-bgClass {
+  background: rgb(100, 79, 68);
+  background: radial-gradient(
+    circle,
+    rgba(100, 79, 68, 0.7) 0%,
+    rgba(169, 76, 47, 0.7) 100%
+  );
+}
+
+.astra-bgClass {
+  background: rgb(90, 41, 193);
+  background: radial-gradient(
+    circle,
+    rgba(90, 41, 193, 0.7) 0%,
+    rgba(58, 18, 107, 0.7) 100%
+  );
+}
+
+.brimstone-bgClass {
+  background: rgb(163, 59, 2);
+  background: radial-gradient(
+    circle,
+    rgba(163, 59, 2, 0.7) 0%,
+    rgba(135, 150, 168, 0.7) 100%
+  );
+}
+
+.neon-bgClass {
+  background: rgb(81, 179, 245);
+  background: radial-gradient(
+    circle,
+    rgba(81, 179, 245, 0.7) 0%,
+    rgba(33, 53, 93, 0.7) 100%
+  );
+}
+
+.yoru-bgClass {
+  background: rgb(0, 4, 230);
+  background: radial-gradient(
+    circle,
+    rgba(143, 184, 255, 0.7) 0%,
+    rgba(0, 4, 230, 0.7) 100%
+  );
+}
+
+.sage-bgClass {
+  background: rgb(8, 128, 98);
+  background: radial-gradient(
+    circle,
+    rgba(227, 218, 239, 0.7) 0%,
+    rgba(8, 128, 98, 0.7) 100%
+  );
+}
+
+.reyna-bgClass {
+  background: rgb(154, 54, 135);
+  background: radial-gradient(
+    circle,
+    rgba(154, 54, 135, 0.7) 0%,
+    rgba(82, 35, 114, 0.7) 100%
+  );
+}
+
+.omen-bgClass {
+  background: rgb(121, 147, 222);
+  background: radial-gradient(
+    circle,
+    rgba(121, 147, 222, 0.7) 0%,
+    rgba(63, 56, 87, 0.7) 100%
+  );
+}
+
+.jett-bgClass {
+  background: rgb(242, 245, 249);
+  background: radial-gradient(
+    circle,
+    rgba(242, 245, 249, 0.7) 0%,
+    rgba(129, 177, 188, 0.7) 100%
+  );
+}
+
+@media only screen and (min-width: 1px) and (max-width: 375px) {
+}
+@media only screen and (min-width: 376px) and (max-width: 640px) {
+}
+@media only screen and (min-width: 641px) and (max-width: 960px) {
+}
+@media only screen and (min-width: 961px) and (max-width: 1200px) {
+}
+@media only screen and (min-width: 1201px) and (max-width: 2560px) {
+}

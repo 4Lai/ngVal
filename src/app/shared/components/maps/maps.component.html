@@ -1,0 +1,30 @@
+<div class="background">
+  <div class="container hidden">
+    <h1 class="hidden">Maps</h1>
+
+    <div class="maps-container">
+      <p class="index-count">#{{ this.indexCount + 1 }}</p>
+      <span (click)="leftCount()" class="material-symbols-outlined left-icon">
+        chevron_left
+      </span>
+      <span (click)="rightCount()" class="material-symbols-outlined right-icon">
+        chevron_right
+      </span>
+      <div class="bg">
+        <img
+          class="map-image"
+          src="{{ this.listOfMaps[this.indexCount].splash }}"
+          alt=""
+        />
+      </div>
+      <img
+        class="absolute"
+        src="{{ this.listOfMaps[this.indexCount].displayIcon }}"
+        alt=""
+      />
+      <h2 class="title-image">
+        {{ this.listOfMaps[this.indexCount].displayName }}
+      </h2>
+    </div>
+  </div>
+</div>
