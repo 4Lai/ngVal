@@ -19,10 +19,9 @@ export class AgentsComponent implements AfterViewInit {
   });
   currentClick: number = 0;
   agentsAvailable;
-  abilities = this.agentsDetailed.map(val => {
-    return 0
-  })
-
+  abilities = this.agentsDetailed.map((val) => {
+    return 0;
+  });
 
   constructor(private activatedRoute: ActivatedRoute) {}
 
@@ -32,7 +31,6 @@ export class AgentsComponent implements AfterViewInit {
 
   ngOnInit() {
     this.agentsAvailable = this.agentsDetailed.slice(0, 2);
-    console.log(this.abilities);
   }
 
   onScroll(event: IInfiniteScrollEvent) {
@@ -46,11 +44,10 @@ export class AgentsComponent implements AfterViewInit {
     } else if (this.agentsAvailable.length === this.agentsDetailed.length) {
       intersect();
     } else {
-      
     }
   }
 
   onClickI(number: number, index: number) {
-    this.abilities[index] = number
+    this.abilities[index] = number;
   }
 }

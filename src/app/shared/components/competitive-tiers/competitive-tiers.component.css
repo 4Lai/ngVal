@@ -1,0 +1,121 @@
+.background {
+  margin-left: 16px;
+  margin-right: 16px;
+  height: 100dvh;
+
+  @media only screen and (min-width: 1600px) and (max-width: 2560px) {
+    margin: 0;
+  }
+}
+
+.width-spacing {
+  margin: auto auto;
+  @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+    width: 75%;
+  }
+}
+
+h1 {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  color: #fff;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    font-size: 32px;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    font-size: 32px;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    font-size: 32px;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    font-size: 32px;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+    font-size: 32px;
+  }
+}
+
+.episode-title-container {
+  cursor: pointer;
+  background-color: #16161c;
+  padding: 32px;
+  text-align: center;
+}
+
+.episode-title {
+  color: #fff;
+  font-size: 48px;
+}
+
+.grid {
+  position: relative;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  background-color: #404047;
+  animation-name: slide-in-from-Y;
+  animation-duration: 1s;
+}
+
+.episode-elements-background {
+  margin-bottom: 20px;
+  animation-name: slide-in-first;
+}
+.episode-elements-background:nth-child(1) {
+  animation-duration: 1.2s;
+}
+.episode-elements-background:nth-child(2) {
+  animation-duration: 1.4s;
+}
+.episode-elements-background:nth-child(3) {
+  animation-duration: 1.6s;
+}
+.episode-elements-background:nth-child(4) {
+  animation-duration: 1.8s;
+}
+.episode-elements-background:nth-child(5) {
+  animation-duration: 2s;
+}
+
+.division-title {
+  color: #fff;
+  font-size: 20px;
+}
+
+.division-img {
+  width: 65px;
+  height: 65px;
+}
+
+.message {
+  color: #fff;
+  padding-left: 32px;
+  padding-top: 8px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(0%, 0%) skew(-15deg);
+}
+
+@keyframes slide-in-first {
+  0% {
+    transform: translate(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-in-from-Y {
+  0% {
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

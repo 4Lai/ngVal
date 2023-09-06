@@ -1,0 +1,29 @@
+<div class="background">
+  <div class="width-spacing hidden">
+    <div class="hidden">
+      <h1>Tiers</h1>
+    </div>
+
+    <div>
+      
+      <div
+        *ngFor="let el of compTiers; let i = index"
+        class="episode-elements-background"
+      >
+        <div (click)="onClickExpand(i)" class="episode-title-container">
+          <h2 class="episode-title">
+            {{ compTiers[i].assetObjectName | slice : 0 : 8 }}
+          </h2>
+        </div>
+        <div *ngIf="numberOnClick === i && isClicked === true"  class="grid">
+            <p class="message">*From lowest to highest rank</p>
+            <div *ngFor="let el of tiers[i]">
+              <p class="division-title">{{ el.divisionName }}</p>
+              <img class="division-img" src="{{ el.smallIcon != null ? el.smallIcon : '../../../../../../assets/img/question mark.png' }}" alt="" />
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

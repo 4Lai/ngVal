@@ -16,6 +16,8 @@ import { MatDialogModule } from '@angular/material/dialog'
 import { FormsModule } from '@angular/forms';
 import { AgentsComponent } from './shared/components/agents/agents.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { CompetitiveTiersComponent } from './shared/components/competitive-tiers/competitive-tiers.component';
+import { WeaponsComponent } from './shared/components/weapons/weapons.component';
 
 
 @NgModule({
@@ -29,6 +31,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     MapsComponent,
     PopupCategoriesComponent,
     AgentsComponent,
+    CompetitiveTiersComponent,
+    WeaponsComponent,
   ],
   imports: [
     BrowserModule,

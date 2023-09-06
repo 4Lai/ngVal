@@ -9,6 +9,8 @@ import { GameModesComponent } from './shared/components/game-modes/game-modes.co
 import { MapsComponent } from './shared/components/maps/maps.component';
 import { AgentsComponent } from './shared/components/agents/agents.component';
 import { agentsDetailedResolver } from './shared/resolvers/agents-detailed.resolver';
+import { CompetitiveTiersComponent } from './shared/components/competitive-tiers/competitive-tiers.component';
+import { competitiveTiersResolver } from './shared/resolvers/competitive-tiers.resolver';
 
 const routes: Routes = [
   {
@@ -30,7 +32,12 @@ const routes: Routes = [
   {
     path: 'agents',
     component: AgentsComponent,
-    resolve: { agentsDetailed: agentsDetailedResolver }
+    resolve: { agentsDetailed: agentsDetailedResolver },
+  },
+  {
+    path: 'competitive-tiers',
+    component: CompetitiveTiersComponent,
+    resolve: { tiers: competitiveTiersResolver },
   },
   { path: '**', component: NotFoundComponent },
 ];
