@@ -7,81 +7,99 @@
     <div
       infiniteScroll
       [scrollWindow]="true"
-      [infiniteScrollDistance]="0"
+      [infiniteScrollDistance]="2"
       [infiniteScrollThrottle]="100"
       (scrolled)="onScroll($event)"
-      *ngFor="let el of agentsAvailable;let i = index"
-      class="agents-container {{el.color}}"
-      [ngClass]="{kayoClass: i === 6}"
     >
       <div
-        class="agent-single-inner-container"
-        *ngIf="el.isPlayableCharacter === true"
+        *ngFor="let el of agentsAvailable; let i = index"
+        class="agents-container {{ el.color }}"
+        [ngClass]="{ kayoClass: i === 6 }"
       >
-        <div class="agent-title-role-container hidden">
-          <h2 class="agent-name">{{ el.displayName }}</h2>
-          <h3 class="agent-role">{{ el.role.displayName }}</h3>
-        </div>
-        <div class="agent-details">
-          <img class="agent-image hidden" src="{{ el.fullPortrait }}" alt="" />
-          <div class="abilities-with-description-container">
-            <div class="abilities-container">
-              <div class="abilities-single-container" [ngClass]="{focused: abilities[i] === 0}">
-                <img
-                  (click)="onClickI(0, i)"
-                  class="skill-icon hidden"
-                  
-                  src="{{ el.abilities[0].displayIcon }}"
-                  alt=""
-                />
-                <p class="skill-name hidden">
-                  {{ el.abilities[0].displayName }}
-                </p>
+        <div
+          class="agent-single-inner-container"
+          *ngIf="el.isPlayableCharacter === true"
+        >
+          <div class="agent-title-role-container hidden">
+            <h2 class="agent-name">{{ el.displayName }}</h2>
+            <h3 class="agent-role">{{ el.role.displayName }}</h3>
+          </div>
+          <div class="agent-details">
+            <img
+              class="agent-image hidden"
+              src="{{ el.fullPortrait }}"
+              alt=""
+            />
+            <div class="abilities-with-description-container">
+              <div class="abilities-container">
+                <div
+                  class="abilities-single-container"
+                  [ngClass]="{ focused: abilities[i] === 0 }"
+                >
+                  <img
+                    (click)="onClickI(0, i)"
+                    class="skill-icon hidden"
+                    src="{{ el.abilities[0].displayIcon }}"
+                    alt=""
+                  />
+                  <p class="skill-name hidden">
+                    {{ el.abilities[0].displayName }}
+                  </p>
+                </div>
+                <div
+                  class="abilities-single-container"
+                  [ngClass]="{ focused: abilities[i] === 1 }"
+                >
+                  <img
+                    (click)="onClickI(1, i)"
+                    class="skill-icon hidden"
+                    src="{{ el.abilities[1].displayIcon }}"
+                    alt=""
+                  />
+                  <p class="skill-name hidden">
+                    {{ el.abilities[1].displayName }}
+                  </p>
+                </div>
+                <div
+                  class="abilities-single-container"
+                  [ngClass]="{ focused: abilities[i] === 2 }"
+                >
+                  <img
+                    (click)="onClickI(2, i)"
+                    class="skill-icon hidden"
+                    src="{{ el.abilities[2].displayIcon }}"
+                    alt=""
+                  />
+                  <p class="skill-name hidden">
+                    {{ el.abilities[2].displayName }}
+                  </p>
+                </div>
+                <div
+                  class="abilities-single-container"
+                  [ngClass]="{ focused: abilities[i] === 3 }"
+                >
+                  <img
+                    (click)="onClickI(3, i)"
+                    class="skill-icon hidden"
+                    src="{{ el.abilities[3].displayIcon }}"
+                    alt=""
+                  />
+                  <p class="skill-name hidden">
+                    {{ el.abilities[3].displayName }}
+                  </p>
+                </div>
               </div>
-              <div class="abilities-single-container" [ngClass]="{focused: abilities[i] === 1}">
-                <img
-                  (click)="onClickI(1, i)"
-                  class="skill-icon hidden"
-                  src="{{ el.abilities[1].displayIcon }}"
-                  alt=""
-                />
-                <p class="skill-name hidden">
-                  {{ el.abilities[1].displayName }}
-                </p>
-              </div>
-              <div class="abilities-single-container" [ngClass]="{focused: abilities[i] === 2}">
-                <img
-                  (click)="onClickI(2, i)"
-                  class="skill-icon hidden"
-                  src="{{ el.abilities[2].displayIcon }}"
-                  alt=""
-                />
-                <p class="skill-name hidden">
-                  {{ el.abilities[2].displayName }}
-                </p>
-              </div>
-              <div class="abilities-single-container" [ngClass]="{focused: abilities[i] === 3}">
-                <img
-                  (click)="onClickI(3, i)"
-                  class="skill-icon hidden"
-                  src="{{ el.abilities[3].displayIcon }}"
-                  alt=""
-                />
-                <p class="skill-name hidden">
-                  {{ el.abilities[3].displayName }}
-                </p>
-              </div>
-            </div>
 
-            <div class="abilities-description-container">
-              <p class="abilities-description">
-                {{ el.abilities[abilities[i]].description }}
-              </p>
+              <div class="abilities-description-container">
+                <p class="abilities-description">
+                  {{ el.abilities[abilities[i]].description }}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="description-background">
-          <p class="agent-description hidden">{{ el.description }}</p>
+          <div class="description-background">
+            <p class="agent-description hidden">{{ el.description }}</p>
+          </div>
         </div>
       </div>
     </div>

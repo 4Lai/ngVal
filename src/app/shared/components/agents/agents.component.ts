@@ -42,7 +42,7 @@ export class AgentsComponent implements AfterViewInit {
       );
       intersect();
     } else if (this.agentsAvailable.length === this.agentsDetailed.length) {
-      intersect();
+        intersect();
     } else {
     }
   }

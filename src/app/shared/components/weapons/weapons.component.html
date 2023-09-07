@@ -1,1 +1,32 @@
-<p>weapons works!</p>
+<div class="background">
+  <div class="width-spacing hidden">
+    <div class="hidden">
+      <h1>Weapons</h1>
+    </div>
+
+    <div class="ui-container">
+      <div
+        (click)="navigateTo(el.displayName)"
+        class="weapons-ui"
+        *ngFor="let el of weaponsDataList"
+      >
+        <div class="weapon-single-container">
+          <p class="weapon-single-title">{{ el.displayName }}</p>
+          <img
+            class="weapon-img"
+            [ngClass]="{
+              weaponImgWrongSizeFix:
+                el.displayName === 'Frenzy' ||
+                el.displayName === 'Classic' ||
+                el.displayName === 'Sheriff'
+            }"
+            src="{{
+              el.shopData?.newImage ? el.shopData?.newImage : el.killStreamIcon
+            }}"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -11,6 +11,9 @@ import { AgentsComponent } from './shared/components/agents/agents.component';
 import { agentsDetailedResolver } from './shared/resolvers/agents-detailed.resolver';
 import { CompetitiveTiersComponent } from './shared/components/competitive-tiers/competitive-tiers.component';
 import { competitiveTiersResolver } from './shared/resolvers/competitive-tiers.resolver';
+import { WeaponsComponent } from './shared/components/weapons/weapons.component';
+import { weaponsResolver } from './shared/resolvers/weapons.resolver';
+import { WeaponsSingleDetailsComponent } from './shared/components/weapons-single-details/weapons-single-details.component';
 
 const routes: Routes = [
   {
@@ -38,6 +41,16 @@ const routes: Routes = [
     path: 'competitive-tiers',
     component: CompetitiveTiersComponent,
     resolve: { tiers: competitiveTiersResolver },
+  },
+  {
+    path: 'weapons',
+    component: WeaponsComponent,
+    resolve: { weapons: weaponsResolver },
+  },
+  {
+    path: 'weapons/:gun',
+    component: WeaponsSingleDetailsComponent,
+    resolve: { weaponsDetails: weaponsResolver },
   },
   { path: '**', component: NotFoundComponent },
 ];

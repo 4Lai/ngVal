@@ -18,6 +18,7 @@ import { AgentsComponent } from './shared/components/agents/agents.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { CompetitiveTiersComponent } from './shared/components/competitive-tiers/competitive-tiers.component';
 import { WeaponsComponent } from './shared/components/weapons/weapons.component';
+import { WeaponsSingleDetailsComponent } from './shared/components/weapons-single-details/weapons-single-details.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { WeaponsComponent } from './shared/components/weapons/weapons.component'
     AgentsComponent,
     CompetitiveTiersComponent,
     WeaponsComponent,
+    WeaponsSingleDetailsComponent,
   ],
   imports: [
     BrowserModule,

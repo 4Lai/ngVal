@@ -1,0 +1,123 @@
+<div class="background">
+  <div class="width-spacing hidden">
+    <div class="hidden">
+      <h1>{{ this.weaponDetails[0].displayName }}</h1>
+    </div>
+
+    <div class="spacing-container">
+      <a class="back-link" routerLink="/weapons">
+        <div class="back-container">
+          <span class="material-symbols-outlined icon"> arrow_back </span>
+          <span class="back-text">BACK TO WEAPONS</span>
+        </div>
+      </a>
+    </div>
+
+    <div
+      (click)="rotateBox()"
+      [ngClass]="{
+        rotateIn: isClicked === true,
+        rotateOut: isClicked === false
+      }"
+      class="image-center-container"
+    >
+      <div class="image-container">
+        <img
+          [ngClass]="{
+            showAfterClick: isClicked === false,
+            hiddenAfterClick: isClicked === true
+          }"
+          class="gun-image"
+          src="{{ this.weaponDetails[0]?.displayIcon }}"
+          alt=""
+        />
+
+        <div
+          class="reverse"
+          [ngClass]="{
+            showAfterClick: isClicked === true,
+            hiddenAfterClick: isClicked === false
+          }"
+        >
+          <div class="gap-between-elements">
+            <div>
+              <h2 class="details-title">Category:</h2>
+              <p class="details-info">
+                {{ this.weaponDetails[0].shopData?.category }}
+              </p>
+            </div>
+            <div>
+              <h2 class="details-title">Price:</h2>
+              <p class="details-info">
+                {{ this.weaponDetails[0].shopData?.cost }}
+              </p>
+            </div>
+            <div>
+              <h2 class="details-title">Kill feedback:</h2>
+              <img
+                class="details-img"
+                src="{{ this.weaponDetails[0]?.killStreamIcon }}"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="gap-between-elements flex-center">
+            <div>
+              <h2 class="details-title">Damage ranges:</h2>
+              <p
+                class="details-info"
+                *ngFor="let el of weaponDetails[0].weaponStats?.damageRanges"
+              >
+                From {{ el.rangeStartMeters }}m To {{ el.rangeEndMeters }}m
+                Head: {{ el.headDamage }} Body: {{ el.bodyDamage }} Leg:
+                {{ el.legDamage }}
+              </p>
+            </div>
+            <div>
+              <h2 class="details-title">Equip time in second:</h2>
+              <p class="details-info">
+                {{ this.weaponDetails[0].weaponStats?.equipTimeSeconds }}
+              </p>
+            </div>
+            <div>
+              <h2 class="details-title">Reolad time in seconds:</h2>
+              <p class="details-info">
+                {{ this.weaponDetails[0].weaponStats?.reloadTimeSeconds }}
+              </p>
+            </div>
+          </div>
+
+          <div class="gap-between-elements flex-end">
+            <div>
+              <h2 class="details-title">Magazine size:</h2>
+              <p class="details-info">
+                {{ this.weaponDetails[0].weaponStats?.magazineSize }}
+              </p>
+            </div>
+            <div>
+              <h2 class="details-title">Fire rate:</h2>
+              <p class="details-info">
+                {{ this.weaponDetails[0].weaponStats?.fireRate }}
+              </p>
+            </div>
+            <div>
+              <h2 class="details-title">First bullet accuracy:</h2>
+              <p class="details-info">
+                {{ this.weaponDetails[0].weaponStats?.firstBulletAccuracy }}
+              </p>
+            </div>
+            <div>
+              <h2 class="details-title">Run speed modifier:</h2>
+              <p class="details-info">
+                {{
+                  this.weaponDetails[0].weaponStats?.runSpeedMultiplier * 100
+                }}%
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

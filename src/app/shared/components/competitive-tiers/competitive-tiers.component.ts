@@ -1,30 +1,26 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CompetitiveTiers } from '../../interfaces/competitive-tiers';
+import { intersect } from '../../helpers/intersector';
 
 @Component({
   selector: 'app-competitive-tiers',
   templateUrl: './competitive-tiers.component.html',
   styleUrls: ['./competitive-tiers.component.css'],
 })
-export class CompetitiveTiersComponent {
-
+export class CompetitiveTiersComponent implements AfterViewInit {
   compTiers: CompetitiveTiers['data'] =
     this.activatedRoute.snapshot.data['tiers']
-
   tiers = this.compTiers.map((val) => {
     return val.tiers;
   })
-  
-
   numberOnClick: number = 0;
   isClicked: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute) {}
 
-  ngOnInit() {
-    console.log(this.compTiers);
-    console.log(this.tiers);
+  ngAfterViewInit(): void {
+    intersect()
   }
 
   onClickExpand(index: number) {

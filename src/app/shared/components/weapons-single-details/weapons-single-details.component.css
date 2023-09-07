@@ -36,7 +36,29 @@ h1 {
   }
 }
 
-.weapons-ui {
+.back-container {
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.icon {
+  font-size: 48px;
+  color: #fff;
+}
+
+.back-text {
+  font-size: 32px;
+  color: #fff;
+}
+
+.back-link {
+  text-decoration: none;
+}
+
+.image-container {
+  position: relative;
   clip-path: polygon(
     30% 0%,
     52% 0,
@@ -47,135 +69,155 @@ h1 {
     0 71%,
     0 0
   );
-  cursor: pointer;
-  position: relative;
-  align-items: center;
-  justify-items: center;
-  display: grid;
-  padding: 16px;
   background-color: #404047;
-  width: 350px;
-  height: 200px;
-  background: linear-gradient(to left, #404047 34%, red 65%) right;
-  background-size: 300% 100%;
+  width: 1200px;
+  height: 600px;
   border: 2px solid red;
-
   @media only screen and (min-width: 1px) and (max-width: 375px) {
-    width: 300px;
+    width: 343px;
+    height: 200px;
   }
   @media only screen and (min-width: 376px) and (max-width: 640px) {
-    width: 300px;
+    width: 343px;
+    height: 200px;
   }
   @media only screen and (min-width: 641px) and (max-width: 960px) {
+    width: 609px;
+    height: 304.5px;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    width: 929px;
+    height: 464.5px;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+    width: 929px;
+    height: 464.5px;
+  }
+}
+
+.gun-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
     width: 200px;
   }
-  @media only screen and (min-width: 961px) and (max-width: 1200px) {
-    width: 250px;
-  }
-  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
-    width: 250px;
-  }
-}
-
-.weapons-ui:hover {
-  transition: 1s;
-  background-position: left;
-  transform: scale(1.05);
-}
-
-.weapon-img {
-  width: 55%;
-  @media only screen and (min-width: 1px) and (max-width: 375px) {
-    width: 85%;
-  }
   @media only screen and (min-width: 376px) and (max-width: 640px) {
-    width: 85%;
+    width: 200px;
   }
   @media only screen and (min-width: 641px) and (max-width: 960px) {
-    width: 85%;
-  }
-  @media only screen and (min-width: 961px) and (max-width: 1200px) {
-    width: 85%;
-  }
-  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
-    width: 85%;
+    width: 400px;
   }
 }
 
-.weaponImgWrongSizeFix {
-  width: 35%;
-  @media only screen and (min-width: 1px) and (max-width: 375px) {
-    width: 50%;
-  }
-  @media only screen and (min-width: 376px) and (max-width: 640px) {
-    width: 50%;
-  }
-  @media only screen and (min-width: 641px) and (max-width: 960px) {
-    width: 50%;
-  }
-  @media only screen and (min-width: 961px) and (max-width: 1200px) {
-    width: 50%;
-  }
-  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
-    width: 50%;
-  }
+.spacing-container {
+  margin-bottom: 20px;
+  width: fit-content;
 }
 
-.ui-container {
-  padding: 32px;
+.image-center-container {
   background-color: #16161c;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  text-align: center;
-  justify-content: space-evenly;
-  align-items: center;
-  row-gap: 25px;
-  @media only screen and (min-width: 1px) and (max-width: 375px) {
-    grid-template-columns: auto;
-  }
-  @media only screen and (min-width: 376px) and (max-width: 640px) {
-    grid-template-columns: auto;
-  }
-  @media only screen and (min-width: 641px) and (max-width: 960px) {
-    grid-template-columns: auto auto;
-  }
-  @media only screen and (min-width: 961px) and (max-width: 1200px) {
-  }
-  @media only screen and (min-width: 1201px) and (max-width: 2560px) {
-  }
-}
-
-.weapon-single-container {
-  display: grid;
+  display: flex;
+  justify-content: center;
   justify-items: center;
+  width: fit-content;
+  margin: auto auto;
+  cursor: pointer;
 }
 
-.weapon-single-title {
-  position: absolute;
-  top: 5%;
-  font-size: 32px;
-  color: #fff;
-  @media only screen and (min-width: 1px) and (max-width: 375px) {
-    font-size: 32px;
-  }
-  @media only screen and (min-width: 376px) and (max-width: 640px) {
-    font-size: 32px;
-  }
-  @media only screen and (min-width: 641px) and (max-width: 960px) {
-    font-size: 32px;
-  }
-  @media only screen and (min-width: 961px) and (max-width: 1200px) {
-    font-size: 32px;
-  }
-  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
-    font-size: 32px;
-  }
+.rotateIn {
+  transform: rotateY(180deg);
+  transition: 2s all;
+}
+.rotateOut {
+  transform: rotateY(0deg);
+  transition: 2s all;
 }
 
 .hidden {
   opacity: 0;
   transform: translateX(-100%);
   transition: 1s;
+}
+
+.hiddenAfterClick {
+  opacity: 0;
+  transition-delay: 0.6s;
+}
+
+.showAfterClick {
+  opacity: 1;
+  transition-delay: 0.6s;
+}
+
+.reverse {
+  width: 80%;
+  z-index: 999;
+  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(-180deg);
+}
+
+.details-title {
+  color: #fff;
+  font-size: 24px;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    font-size: 10px;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    font-size: 10px;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    font-size: 18px;
+  }
+}
+
+.details-info {
+  color: #fff;
+  font-size: 18px;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    font-size: 8px;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    font-size: 8px;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    font-size: 12px;
+  }
+}
+
+.details-img {
+  width: 50%;
+}
+
+.gap-between-elements {
+  display: grid;
+  gap: 20px;
+  justify-content: space-between;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    gap: 5px;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    gap: 5px;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    gap: 5px;
+  }
+}
+
+.flex-end {
+  display: grid;
+  justify-content: flex-end;
+}
+
+.flex-center {
+  display: grid;
+  justify-content: center;
 }
 
 @media (prefers-reduced-motion) {
