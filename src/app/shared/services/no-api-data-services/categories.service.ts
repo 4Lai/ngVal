@@ -34,7 +34,7 @@ export class CategoriesService {
     },
     {
       title: 'Skin bundles',
-      url: '/bundles',
+      url: '/skin-bundles',
     },
     {
       title: 'Gun buddies',

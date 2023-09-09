@@ -7,8 +7,9 @@
     <div class="grid">
       <div
         class="game-modes-element-container hidden"
-        *ngFor="let el of this.gameModeList;"
+        *ngFor="let el of this.gameModeList"
       >
+        <div class="cent">
           <img
             *ngIf="el.displayIcon != null"
             class="image-icon"
@@ -24,8 +25,14 @@
 
           <p class="title">{{ el.displayName }}</p>
           <p class="duration">{{ el.duration != null ? el.duration : "?" }}</p>
-          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium facilis quibusdam aperiam impedit tempore molestias dolores nisi, itaque possimus.</p>
-
+        </div>
+        <div>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            laudantium facilis quibusdam aperiam impedit tempore molestias
+            dolores nisi, itaque possimus.
+          </p>
+        </div>
       </div>
     </div>
   </div>

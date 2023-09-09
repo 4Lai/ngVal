@@ -17,4 +17,5 @@ export class GameModesComponent implements AfterViewInit {
   ngAfterViewInit() {
     intersect();
   }
+
 }

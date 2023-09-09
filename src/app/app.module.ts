@@ -19,6 +19,9 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { CompetitiveTiersComponent } from './shared/components/competitive-tiers/competitive-tiers.component';
 import { WeaponsComponent } from './shared/components/weapons/weapons.component';
 import { WeaponsSingleDetailsComponent } from './shared/components/weapons-single-details/weapons-single-details.component';
+import { EventsComponent } from './shared/components/events/events.component';
+import { SkinBundlesComponent } from './shared/components/skin-bundles/skin-bundles.component';
+import { GunBuddiesComponent } from './shared/components/gun-buddies/gun-buddies.component';
 
 
 @NgModule({
@@ -35,6 +38,9 @@ import { WeaponsSingleDetailsComponent } from './shared/components/weapons-singl
     CompetitiveTiersComponent,
     WeaponsComponent,
     WeaponsSingleDetailsComponent,
+    EventsComponent,
+    SkinBundlesComponent,
+    GunBuddiesComponent,
   ],
   imports: [
     BrowserModule,

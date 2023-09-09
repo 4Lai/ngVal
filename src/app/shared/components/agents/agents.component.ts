@@ -25,13 +25,14 @@ export class AgentsComponent implements AfterViewInit {
 
   constructor(private activatedRoute: ActivatedRoute) {}
 
+  ngOnInit() {
+    this.agentsAvailable = this.agentsDetailed.slice(0, 2);
+  }
+  
   ngAfterViewInit() {
     intersect();
   }
 
-  ngOnInit() {
-    this.agentsAvailable = this.agentsDetailed.slice(0, 2);
-  }
 
   onScroll(event: IInfiniteScrollEvent) {
     if (this.agentsAvailable.length < 2) {

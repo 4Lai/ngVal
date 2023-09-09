@@ -21,9 +21,12 @@ export class WeaponsSingleDetailsComponent implements AfterViewInit {
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
 
-
   ngAfterViewInit(): void {
     intersect();
+  }
+
+  ngOnInit() {
+    console.log(this.weaponDetails);
   }
 
   backButton() {
@@ -31,6 +34,6 @@ export class WeaponsSingleDetailsComponent implements AfterViewInit {
   }
 
   rotateBox() {
-      this.isClicked = !this.isClicked;
+    this.isClicked = !this.isClicked;
   }
 }

@@ -1,0 +1,35 @@
+<div class="background">
+  <div class="width-spacing hidden">
+    <div class="hidden">
+      <h1>Gun buddies</h1>
+
+      <div
+        infiniteScroll
+        [scrollWindow]="true"
+        [infiniteScrollDistance]="2"
+        [infiniteScrollThrottle]="100"
+        (scrolled)="onScroll($event)"
+        class="grid"
+      >
+        <div class="" *ngFor="let el of gunBuddiesInsertedData">
+          
+          <div class="element-container-background">
+
+            <div class="element-container hidden">
+
+              <div class="buddies-title-container">
+                <h2 class="buddies-title">{{ el.displayName }}</h2>
+              </div>
+
+              <div class="buddies-image-container">
+                <img class="buddies-image" src="{{ el.displayIcon }}" alt="" />
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
