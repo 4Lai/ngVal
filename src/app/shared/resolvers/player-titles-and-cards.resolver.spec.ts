@@ -1,11 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 import { ResolveFn } from '@angular/router';
 
-import { eventsResolver } from './events.resolver';
+import { playerTitlesAndCardsResolver } from './player-titles-and-cards.resolver';
 
-describe('eventsResolver', () => {
+describe('playerTitlesAndCardsResolver', () => {
   const executeResolver: ResolveFn<boolean> = (...resolverParameters) => 
-      TestBed.runInInjectionContext(() => eventsResolver(...resolverParameters));
+      TestBed.runInInjectionContext(() => playerTitlesAndCardsResolver(...resolverParameters));
 
   beforeEach(() => {
     TestBed.configureTestingModule({});

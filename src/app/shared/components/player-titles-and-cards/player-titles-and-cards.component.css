@@ -36,6 +36,10 @@ h1 {
   }
 }
 
+.spacing {
+  padding-bottom: 30px;
+}
+
 .hidden {
   opacity: 0;
   transform: translateX(-100%);

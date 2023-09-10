@@ -29,10 +29,6 @@ export class CategoriesService {
       url: '/weapons',
     },
     {
-      title: 'Events',
-      url: '/events',
-    },
-    {
       title: 'Skin bundles',
       url: '/skin-bundles',
     },
@@ -41,12 +37,8 @@ export class CategoriesService {
       url: '/gun-buddies',
     },
     {
-      title: 'Player Cards',
-      url: '/player-cards',
-    },
-    {
-      title: 'Player titles',
-      url: '/player-titles',
+      title: 'Player cards and titles',
+      url: '/player-cards-and-titles',
     },
   ];
 }

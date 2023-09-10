@@ -5,7 +5,6 @@
     </div>
 
     <div>
-      
       <div
         *ngFor="let el of compTiers; let i = index"
         class="episode-elements-background"
@@ -15,13 +14,32 @@
             {{ compTiers[i].assetObjectName | slice : 0 : 8 }}
           </h2>
         </div>
-        <div *ngIf="numberOnClick === i && isClicked === true"  class="grid">
-            <p class="message">*From lowest to highest rank</p>
-            <div *ngFor="let el of tiers[i]">
-              <p class="division-title">{{ el.divisionName }}</p>
-              <img class="division-img" src="{{ el.smallIcon != null ? el.smallIcon : '../../../../../../assets/img/question mark.png' }}" alt="" />
-
-          </div>
+        <div *ngIf="numberOnClick === i && isClicked === true" class="grid">
+          <p class="message">*From lowest to highest rank</p>
+          <ng-container *ngFor="let el of tiers[i]; let first = first; let last = last";>
+            <div *ngIf="first "></div>
+            <div *ngIf="first && el.smallIcon">
+              <div>
+                <p class="division-title">{{ el.divisionName }}</p>
+                <img class="division-img" src="{{ el.smallIcon }}" alt="" />
+              </div>
+            </div>
+            <div *ngIf="first "></div>
+            <div *ngIf="!first && !last && el.smallIcon">
+              
+                <p class="division-title">{{ el.divisionName }}</p>
+                <img class="division-img" src="{{ el.smallIcon }}" alt="" />
+              
+            </div>
+            <div *ngIf="last"></div>
+            <div *ngIf="last && el.smallIcon">
+              
+                <p class="division-title">{{ el.divisionName }}</p>
+                <img class="division-img" src="{{ el.smallIcon }}" alt="" />
+              
+            </div>
+            <div *ngIf="last"></div>
+          </ng-container>
         </div>
       </div>
     </div>

@@ -1,0 +1,21 @@
+<div>
+  <h2 class="player-titles-title">Player titles:</h2>
+
+  <div
+    infiniteScroll
+    [scrollWindow]="false"
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="100"
+    (scrolled)="onScroll($event)"
+    class="titles-container"
+  >
+    <div class="single-titles" *ngFor="let el of playerTitlesDataNew[0]">
+      <div class="titles-name-container">
+        <p>{{ el.titleText }}</p>
+      </div>
+      <div class="titles-text-container">
+        <p class="titles-text">{{ el.displayName }}</p>
+      </div>
+    </div>
+  </div>
+</div>

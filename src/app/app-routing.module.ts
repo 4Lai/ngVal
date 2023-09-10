@@ -14,12 +14,12 @@ import { competitiveTiersResolver } from './shared/resolvers/competitive-tiers.r
 import { WeaponsComponent } from './shared/components/weapons/weapons.component';
 import { weaponsResolver } from './shared/resolvers/weapons.resolver';
 import { WeaponsSingleDetailsComponent } from './shared/components/weapons-single-details/weapons-single-details.component';
-import { EventsComponent } from './shared/components/events/events.component';
-import { eventsResolver } from './shared/resolvers/events.resolver';
 import { SkinBundlesComponent } from './shared/components/skin-bundles/skin-bundles.component';
 import { skinBundlesResolver } from './shared/resolvers/skin-bundles.resolver';
 import { GunBuddiesComponent } from './shared/components/gun-buddies/gun-buddies.component';
 import { gunBuddiesResolver } from './shared/resolvers/gun-buddies.resolver';
+import { PlayerTitlesAndCardsComponent } from './shared/components/player-titles-and-cards/player-titles-and-cards.component';
+import { playerTitlesAndCardsResolver } from './shared/resolvers/player-titles-and-cards.resolver';
 
 const routes: Routes = [
   {
@@ -59,11 +59,6 @@ const routes: Routes = [
     resolve: { weaponsDetails: weaponsResolver },
   },
   {
-    path: 'events',
-    component: EventsComponent,
-    resolve: { events: eventsResolver },
-  },
-  {
     path: 'skin-bundles',
     component: SkinBundlesComponent,
     resolve: { skinBundles: skinBundlesResolver },
@@ -72,6 +67,11 @@ const routes: Routes = [
     path: 'gun-buddies',
     component: GunBuddiesComponent,
     resolve: { gunBuddies: gunBuddiesResolver },
+  },
+  {
+    path: 'player-cards-and-titles',
+    component: PlayerTitlesAndCardsComponent,
+    resolve: { pTitlesAndCards: playerTitlesAndCardsResolver },
   },
   { path: '**', component: NotFoundComponent },
 ];

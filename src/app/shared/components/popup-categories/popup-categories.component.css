@@ -1,6 +1,6 @@
 .background {
-  height: 80dvh;
-  width: 60dvw;
+  height: 65dvh;
+  width: 55dvw;
   overflow-x: hidden;
 }
 
@@ -41,13 +41,11 @@
 .even:hover {
   transition: 1s;
   background-position: left;
-  transform: scale(1.05);
 }
 
 .even:active {
   transition: 0.5s;
   background-position: left;
-  transform: scale(1.05);
 }
 
 .odd {
@@ -58,13 +56,11 @@
 .odd:hover {
   transition: 1s;
   background-position: left;
-  transform: scale(1.05);
 }
 
 .odd:active {
   transition: 0.5s;
   background-position: left;
-  transform: scale(1.05);
 }
 
 .hover-icon {

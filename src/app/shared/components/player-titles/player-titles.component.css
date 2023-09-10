@@ -1,0 +1,98 @@
+.player-titles-title {
+  color: #fff;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.titles-container {
+  border-left: 4px solid red;
+  border-bottom: 4px solid red;
+  border-top: 4px solid red;
+  background-color: #16161c;
+  padding: 32px;
+  width: 100%;
+  height: 45dvh;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    padding: 16px;
+    grid-template-columns: auto;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    padding: 16px;
+    grid-template-columns: auto;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    grid-template-columns: auto;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    grid-template-columns: 45% 45%;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+  }
+}
+
+.single-titles {
+  border: 1px solid red;
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-bottom: 10px;
+  background-color: #404047;
+  display: grid;
+  grid-template-columns: 33.33% 66.66%;
+  justify-content: center;
+}
+
+.titles-text-container {
+  padding: 16px;
+  height: 80px;
+  width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background: rgb(0, 224, 255);
+  background: radial-gradient(
+    circle,
+    rgba(0, 224, 255, 0) 0%,
+    rgba(255, 0, 0, 0.8) 100%
+  );
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin: auto auto;
+}
+
+.titles-text {
+  color: #fff;
+  font-size: 20px;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    font-size: 12px;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    font-size: 12px;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+  }
+}
+
+.titles-image {
+  z-index: 999;
+}
+
+.titles-name-container {
+  display: grid;
+  align-items: center;
+  z-index: 9999;
+  padding: 8px;
+  border: 2px solid black;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}

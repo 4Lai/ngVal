@@ -19,9 +19,11 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { CompetitiveTiersComponent } from './shared/components/competitive-tiers/competitive-tiers.component';
 import { WeaponsComponent } from './shared/components/weapons/weapons.component';
 import { WeaponsSingleDetailsComponent } from './shared/components/weapons-single-details/weapons-single-details.component';
-import { EventsComponent } from './shared/components/events/events.component';
 import { SkinBundlesComponent } from './shared/components/skin-bundles/skin-bundles.component';
 import { GunBuddiesComponent } from './shared/components/gun-buddies/gun-buddies.component';
+import { PlayerTitlesAndCardsComponent } from './shared/components/player-titles-and-cards/player-titles-and-cards.component';
+import { PlayerCardsComponent } from './shared/components/player-cards/player-cards.component';
+import { PlayerTitlesComponent } from './shared/components/player-titles/player-titles.component';
 
 
 @NgModule({
@@ -38,9 +40,11 @@ import { GunBuddiesComponent } from './shared/components/gun-buddies/gun-buddies
     CompetitiveTiersComponent,
     WeaponsComponent,
     WeaponsSingleDetailsComponent,
-    EventsComponent,
     SkinBundlesComponent,
     GunBuddiesComponent,
+    PlayerTitlesAndCardsComponent,
+    PlayerCardsComponent,
+    PlayerTitlesComponent,
   ],
   imports: [
     BrowserModule,

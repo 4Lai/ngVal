@@ -4,17 +4,18 @@
       <h1>Skin bundles</h1>
     </div>
 
-    <div       infiniteScroll
+    <div
+      infiniteScroll
       [scrollWindow]="true"
       [infiniteScrollDistance]="2"
       [infiniteScrollThrottle]="100"
-      (scrolled)="onScroll($event)">
+      (scrolled)="onScroll($event)"
+    >
       <div class="bundle-single-container" *ngFor="let el of skinInsertedData">
         <img class="bundle-image" src="{{ el.displayIcon }}" alt="" />
         <h2 class="bundle-title">{{ el.displayName }}</h2>
         <div class="width" #fireUp></div>
       </div>
     </div>
-
   </div>
 </div>

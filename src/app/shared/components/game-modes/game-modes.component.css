@@ -59,6 +59,7 @@ h1 {
 }
 
 .game-modes-element-container {
+  cursor: pointer;
   position: relative;
   gap: 20px;
   min-height: 270px;
@@ -111,7 +112,7 @@ h1 {
   }
   .description {
     opacity: 1;
-    transition: all 1.2s;
+    transition: all 2s;
   }
 }
 
@@ -163,6 +164,9 @@ h1 {
 }
 
 .description {
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
   position: absolute;
   opacity: 0;
   top: 50%;
