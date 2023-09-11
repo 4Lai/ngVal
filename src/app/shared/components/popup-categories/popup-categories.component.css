@@ -1,7 +1,25 @@
 .background {
-  height: 65dvh;
-  width: 55dvw;
+  height: fit-content;
+  width: 50dvw;
   overflow-x: hidden;
+  @media only screen and (min-width: 1px) and (max-width: 375px) {
+    width: 70dvw;
+    height: 70dvh;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    width: 70dvw;
+    height: 70dvh;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    width: 70dvw;
+    height: 70dvh;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    width: 70dvw;
+    height: 70dvh;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+  }
 }
 
 .header-container {

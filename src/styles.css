@@ -25,6 +25,7 @@
 html,
 body {
   background: url(../src/assets/img/mainBackground.jpeg) no-repeat fixed;
+  background-size: cover;
   margin: 0;
   height: 100%;
 }
