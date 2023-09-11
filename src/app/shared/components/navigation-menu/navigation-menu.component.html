@@ -6,8 +6,7 @@
 
 <div
   class="navigation-container"
-  [ngClass]="{ clicked: isClicked === true }"
-  *ngIf="isClicked === true"
+  [ngClass]="{clicked:isClicked === true, unclicked:isClicked === false && revert === true}"
 >
   <div class="adjusting">
     <div (click)="toMain()" class="title-container">

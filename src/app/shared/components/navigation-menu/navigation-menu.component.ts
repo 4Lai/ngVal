@@ -9,11 +9,13 @@ import { Router } from '@angular/router';
 })
 export class NavigationMenuComponent {
   isClicked: boolean = false;
+  revert:boolean = false;
 
   constructor(public categories: CategoriesService, public router: Router) {}
 
   openMenu() {
     this.isClicked = !this.isClicked;
+    this.revert = true;
   }
 
   toMain() {

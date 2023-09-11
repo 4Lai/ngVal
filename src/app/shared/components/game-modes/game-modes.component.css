@@ -130,7 +130,9 @@ h1 {
 }
 
 .image-icon {
+  opacity: 1;
   width: 100px;
+  transition: 2.5s all;
 }
 
 .img-question-mark {
@@ -140,10 +142,12 @@ h1 {
 
 .title {
   color: #fff;
+    transition: 2.5s all;
 }
 
 .duration {
   color: #fff;
+    transition: 2.5s all;
 }
 
 .hidden {

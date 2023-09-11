@@ -38,6 +38,7 @@
   height: 100%;
   left: 0;
   position: fixed;
+  transform: translate(-100%);
 }
 
 .link-container {
@@ -88,7 +89,25 @@
 }
 
 .clicked {
-  animation: slidein 0.6s;
+  animation: slidei 0.6s;
+  transform: translate(0);
+  transition: 1s all;
+}
+
+.unclicked {
+  animation: slideout 0.6s;
+    transform: translate(-100);
+  transition: 1s all;
+}
+
+@keyframes slideout {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes slidein {
